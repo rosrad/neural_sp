@@ -20,7 +20,7 @@ requirements = {
         'setproctitle',
         'tensorboardX>=1.6',
         'tqdm',
-        'torch==1.0.0',
+        'torch>=1.0.0',
     ],
     'setup': [
 
