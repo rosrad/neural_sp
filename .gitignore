@@ -13,3 +13,5 @@ examples/*/*/utils
 neural_sp.egg-info
 examples/*/*/corpus/*
 examples/*/*/result/*
+build/
+dist/
