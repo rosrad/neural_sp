@@ -1,18 +1,14 @@
 export NEURALSP_ROOT=$PWD/../../..
-export TOOL=/home/inaguma/tool/neural_sp
-export CONDA=$TOOL/miniconda
-# export KALDI_ROOT=$TOOL/kaldi
-export KALDI_ROOT="/n/sd8/inaguma/kaldi"
+export KALDI_ROOT=/home/boren/Code/kaldi
 
 # Kaldi
 [ -f $KALDI_ROOT/tools/env.sh ] && . $KALDI_ROOT/tools/env.sh
-export PATH=$NEURALSP_ROOT/utils:$PWD/utils/:$KALDI_ROOT/tools/sctk/bin/:$TOOL/sentencepiece/build/src:$PATH
+export PATH=$NEURALSP_ROOT/utils:$PWD/utils/:$KALDI_ROOT/tools/sctk/bin/:$PATH
 [ ! -f $KALDI_ROOT/tools/config/common_path.sh ] && echo >&2 "The standard file $KALDI_ROOT/tools/config/common_path.sh is not present -> Exit!" && exit 1
 . $KALDI_ROOT/tools/config/common_path.sh
 export LC_ALL=C
 
 ### Python
-source $CONDA/etc/profile.d/conda.sh && conda deactivate && conda activate
 export PYTHONDONTWRITEBYTECODE=1
 export OMP_NUM_THREADS=1
 

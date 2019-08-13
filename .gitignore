@@ -6,7 +6,10 @@ __pycache__
 .ftpconfig
 .nfs*
 *.done
+.vscode
 
 examples/*/*/steps
 examples/*/*/utils
 neural_sp.egg-info
+examples/*/*/corpus/*
+examples/*/*/result/*
